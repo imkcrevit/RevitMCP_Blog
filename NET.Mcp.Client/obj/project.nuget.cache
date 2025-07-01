@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "dgSpecHash": "Lv+bYPDzrCU=",
+  "success": true,
+  "projectFilePath": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Client\\NET.Mcp.Client.csproj",
+  "expectedPackageFiles": [
+    "D:\\Backup\\Documents\\.nuget\\packages\\microsoft.extensions.ai\\9.5.0\\microsoft.extensions.ai.9.5.0.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\microsoft.extensions.ai.abstractions\\9.5.0\\microsoft.extensions.ai.abstractions.9.5.0.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\microsoft.extensions.ai.openai\\9.4.3-preview.1.25230.7\\microsoft.extensions.ai.openai.9.4.3-preview.1.25230.7.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\microsoft.extensions.diagnostics.abstractions\\8.0.0\\microsoft.extensions.diagnostics.abstractions.8.0.0.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\8.0.0\\microsoft.extensions.fileproviders.abstractions.8.0.0.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\8.0.0\\microsoft.extensions.hosting.abstractions.8.0.0.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.3\\microsoft.extensions.logging.abstractions.8.0.3.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\modelcontextprotocol\\0.2.0-preview.1\\modelcontextprotocol.0.2.0-preview.1.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\openai\\2.2.0-beta.4\\openai.2.2.0-beta.4.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\system.clientmodel\\1.2.1\\system.clientmodel.1.2.1.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\system.diagnostics.diagnosticsource\\8.0.1\\system.diagnostics.diagnosticsource.8.0.1.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\system.memory.data\\8.0.1\\system.memory.data.8.0.1.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\system.net.serversentevents\\10.0.0-preview.3.25171.5\\system.net.serversentevents.10.0.0-preview.3.25171.5.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\system.text.json\\8.0.5\\system.text.json.8.0.5.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\system.threading.channels\\8.0.0\\system.threading.channels.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,120 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\VS_Project\\RevitMCP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|d:\\vs_project\\revitmcp\\net.mcp.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|solutionrelative:net.mcp.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF86C7BC-25F3-C317-B709-6F71C55D2762}|NET.Mcp.Client\\NET.Mcp.Client.csproj|d:\\vs_project\\revitmcp\\net.mcp.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF86C7BC-25F3-C317-B709-6F71C55D2762}|NET.Mcp.Client\\NET.Mcp.Client.csproj|solutionrelative:net.mcp.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\vs_project\\revitmcp\\revittest\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|D:\\VS_Project\\RevitMCP\\revittest\\functionusercallwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\functionusercallwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|D:\\VS_Project\\RevitMCP\\revittest\\functionusercallwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\functionusercallwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FunctionUserCallWindow.xaml.cs",
+              "DocumentMoniker": "D:\\VS_Project\\RevitMCP\\RevitTest\\FunctionUserCallWindow.xaml.cs",
+              "RelativeDocumentMoniker": "RevitTest\\FunctionUserCallWindow.xaml.cs",
+              "ToolTip": "D:\\VS_Project\\RevitMCP\\RevitTest\\FunctionUserCallWindow.xaml.cs",
+              "RelativeToolTip": "RevitTest\\FunctionUserCallWindow.xaml.cs",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAywGcAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T03:05:49.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FunctionUserCallWindow.xaml",
+              "DocumentMoniker": "D:\\VS_Project\\RevitMCP\\RevitTest\\FunctionUserCallWindow.xaml",
+              "RelativeDocumentMoniker": "RevitTest\\FunctionUserCallWindow.xaml",
+              "ToolTip": "D:\\VS_Project\\RevitMCP\\RevitTest\\FunctionUserCallWindow.xaml",
+              "RelativeToolTip": "RevitTest\\FunctionUserCallWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-01T03:05:33.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Command.cs",
+              "DocumentMoniker": "D:\\VS_Project\\RevitMCP\\RevitTest\\Command.cs",
+              "RelativeDocumentMoniker": "RevitTest\\Command.cs",
+              "ToolTip": "D:\\VS_Project\\RevitMCP\\RevitTest\\Command.cs",
+              "RelativeToolTip": "RevitTest\\Command.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAwwKEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T03:04:30.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Client\\Program.cs",
+              "RelativeDocumentMoniker": "NET.Mcp.Client\\Program.cs",
+              "ToolTip": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Client\\Program.cs",
+              "RelativeToolTip": "NET.Mcp.Client\\Program.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAADwvyoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T03:00:59.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Server\\Program.cs",
+              "RelativeDocumentMoniker": "NET.Mcp.Server\\Program.cs",
+              "ToolTip": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Server\\Program.cs",
+              "RelativeToolTip": "NET.Mcp.Server\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T03:00:57.073Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
