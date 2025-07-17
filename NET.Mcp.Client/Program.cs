@@ -43,7 +43,7 @@ var client = new ChatClientBuilder(chatClient.AsIChatClient()).UseFunctionInvoca
 
 var prompts = new List<Microsoft.Extensions.AI.ChatMessage>
 {
-    new ChatMessage(ChatRole.System, """you are a professional enginer in BIM , so you can select the greate tool to user , and generation a standard input style And Arguments to tools"""),
+    new ChatMessage(ChatRole.System, """you are a professional enginer in BIM , so you can select the greate tool to user , also has a good develop tech in code , and generation a standard input style And Arguments to tools , also if some question need unique id you will generate a unique eId in this talk , the example :0B7FB9A8-DAD8-48CE-9D41-5EDB63832BD2"""),
     new ChatMessage(ChatRole.User, input)
 };
 
@@ -65,30 +65,37 @@ var chatOptions = new ChatOptions()
 var res = await client.GetResponseAsync(prompts, chatOptions);
 
 var message = res.Messages[1].Contents[0];
-var value = ((Microsoft.Extensions.AI.FunctionResultContent)message).Result;
-var convert = JsonConvert.DeserializeObject(value.ToString());
+var commandTools = from content in res.Messages
+    where content.Role == ChatRole.Tool
+    from toolContent in content.Contents
+    select (toolContent as FunctionResultContent).Result;
 
-// 反序列化
-ResponseData data = JsonConvert.DeserializeObject<ResponseData>(value.ToString());
-
-// 访问数据
-foreach (var item in data.Content)
+var resultBuilder = new StringBuilder();
+resultBuilder.AppendLine("[");
+for (int i = 0; i < commandTools.Count(); i++)
 {
-    //Console.WriteLine($"Type: {item.Type}, Text: {item.Text}");
-    var d = item.Text;
-    
-    Console.WriteLine(d);
+    object commandTool = commandTools.ElementAt(i);
+    // 反序列化
+    ResponseData data = JsonConvert.DeserializeObject<ResponseData>(commandTool.ToString());
+
+    // 访问数据
+    foreach (var item in data.Content)
+    {
+        //Console.WriteLine($"Type: {item.Type}, Text: {item.Text}");
+        var d = item.Text;
+
+        resultBuilder.AppendLine(d);
+    }
+    if (i == commandTools.Count() - 1)
+        continue;
+    resultBuilder.AppendLine(",");
 }
-//Console.WriteLine($"IsError: {data.IsError}");
 
-//var result =  await mcpClient.CallToolAsync("RevitTool", new Dictionary<string, object?>()
-//{
-//    ["command"] = "Hello"
-//});
+resultBuilder.AppendLine("]");
 
-//Console.WriteLine(result.Content.First().Text);
+Console.WriteLine(resultBuilder);
 
-//Console.Read();
+
 
 
 public class CreateWallData

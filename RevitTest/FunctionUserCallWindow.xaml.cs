@@ -62,61 +62,127 @@ namespace RevitTest
                     //    transaction.Commit();
                     //}
 
-                    var args = string.Empty;
-                    if (selection.Value == -1)
-                    {
-                        args = string.Empty;
-                    }
-                    else
-                    {
+                    #region 单个调用 Single Use MCP
 
-                        var ele = uiDoc.Document.GetElement(selection) as Wall;
+                    //var args = string.Empty;
+                    //if (selection.Value == -1)
+                    //{
+                    //    args = string.Empty;
+                    //}
+                    //else
+                    //{
 
-                        var wallLocation = ele.Location as LocationCurve;
-                        var wallString = ConvertToString(wallLocation.Curve);
-                        args = $"WallId:{selection} , WallData: {wallString}";
-                    }
+                    //    var ele = uiDoc.Document.GetElement(selection) as Wall;
+
+                    //    var wallLocation = ele.Location as LocationCurve;
+                    //    var wallString = ConvertToString(wallLocation.Curve);
+                    //    args = $"WallId:{selection} , WallData: {wallString}";
+                    //}
+
+                    //var process = new Process
+                    //{
+                    //    StartInfo = new ProcessStartInfo
+                    //    {
+                    //        FileName = @"NET.Mcp.Client.exe",          // 可执行文件路径（如 "cmd.exe"）
+                    //        Arguments = this.TextBox.Text + $"选中构件的数据为 ：{args}",       // 命令行参数
+                    //        UseShellExecute = false,     // 必须为 false 才能重定向输出
+                    //        CreateNoWindow = true,       // 隐藏控制台窗口
+                    //        RedirectStandardOutput = true, // 重定向标准输出
+                    //        RedirectStandardError = true  // 重定向错误输出（可选）
+                    //    }
+                    //};
+
+                    //process.Start();
+
+                    //// 读取所有输出（同步方式）
+                    //string output = process.StandardOutput.ReadToEnd();
+                    //string errors = process.StandardError.ReadToEnd(); // 如果需要错误流
+
+                    //process.WaitForExit(); // 等待进程结束
+                    //process.Close(); // 关闭进程
+
+                    //if (string.IsNullOrEmpty(errors))
+                    //{
+                    //    var jsonConvertData = JsonConvert.DeserializeObject<CreateWallData>(output);
+                    //    var methodName = jsonConvertData.Command;
+                    //    // 1. 加载DLL
+                    //    Assembly assembly = typeof(Command).Assembly;
+
+                    //    // 2. 查找实现类（通过接口或命名约定）
+                    //    Type commandType = assembly.GetTypes()
+                    //        .FirstOrDefault(t => t.Name == methodName);
+
+                    //    if (commandType == null)
+                    //        throw new Exception($"未找到 {methodName} 的实现类");
+
+                    //    var eCommand = (IRevitCommand)Activator.CreateInstance(commandType);
+                    //    eCommand.Execute(JsonConvert.SerializeObject(jsonConvertData.Args));
+
+                    //}
+
+                    #endregion
+                     
+                    #region 多重调用 LangChain That Can Auto Generation Wall And Then Insert Window 
+
 
                     var process = new Process
                     {
                         StartInfo = new ProcessStartInfo
                         {
-                            FileName = @"NET.Mcp.Client.exe",          // 可执行文件路径（如 "cmd.exe"）
-                            Arguments = this.TextBox.Text + $"选中构件的数据为 ：{args}",       // 命令行参数
-                            UseShellExecute = false,     // 必须为 false 才能重定向输出
-                            CreateNoWindow = true,       // 隐藏控制台窗口
+                            FileName =
+                                @"D:\工作文件\Development\XGZPlatform\NET.Mcp.Client\bin\Debug\net8.0\NET.Mcp.Client.exe", // 可执行文件路径（如 "cmd.exe"）
+                            Arguments = TextBox.Text, // 命令行参数
+                            UseShellExecute = false, // 必须为 false 才能重定向输出
+                            CreateNoWindow = true, // 隐藏控制台窗口
                             RedirectStandardOutput = true, // 重定向标准输出
-                            RedirectStandardError = true  // 重定向错误输出（可选）
+                            RedirectStandardError = true // 重定向错误输出（可选）
                         }
                     };
 
                     process.Start();
 
                     // 读取所有输出（同步方式）
-                    string output = process.StandardOutput.ReadToEnd();
-                    string errors = process.StandardError.ReadToEnd(); // 如果需要错误流
+                    //string output = process.StandardOutput.ReadToEnd();
+                    //string errors = process.StandardError.ReadToEnd(); // 如果需要错误流
+                    var data = new List<string>();
+                    using (var outputReader = process.StandardOutput)
+                    {
+                        using (var errorReader = process.StandardError)
+                        {
+                            while (!outputReader.EndOfStream || !errorReader.EndOfStream)
+                                if (!outputReader.EndOfStream)
+                                {
+                                    var line = outputReader.ReadToEnd();
+                                    data.Add(line);
+                                }
+                        }
+                    }
+
 
                     process.WaitForExit(); // 等待进程结束
                     process.Close(); // 关闭进程
-
-                    if (string.IsNullOrEmpty(errors))
+                    foreach (var item in data)
                     {
-                        var jsonConvertData = JsonConvert.DeserializeObject<CreateWallData>(output);
-                        var methodName = jsonConvertData.Command;
-                        // 1. 加载DLL
-                        Assembly assembly = typeof(Command).Assembly;
+                        var jsonConvertData = JsonConvert.DeserializeObject<List<Command.CreateWallData>>(item);
+                        foreach (var createWallData in jsonConvertData)
+                        {
+                            var methodName = createWallData.Command;
+                            // 1. 加载DLL
+                            var assembly = typeof(Command).Assembly;
 
-                        // 2. 查找实现类（通过接口或命名约定）
-                        Type commandType = assembly.GetTypes()
-                            .FirstOrDefault(t => t.Name == methodName);
+                            // 2. 查找实现类（通过接口或命名约定）
+                            var commandType = assembly.GetTypes()
+                                .FirstOrDefault(t => t.Name == methodName);
 
-                        if (commandType == null)
-                            throw new Exception($"未找到 {methodName} 的实现类");
+                            if (commandType == null)
+                                throw new Exception($"未找到 {methodName} 的实现类");
 
-                        var eCommand = (IRevitCommand)Activator.CreateInstance(commandType);
-                        eCommand.Execute(JsonConvert.SerializeObject(jsonConvertData.Args));
-
+                            var eCommand = (Command.IRevitCommand)Activator.CreateInstance(commandType);
+                            eCommand.Execute(JsonConvert.SerializeObject(createWallData.Args) , uiDoc.Document);
+                        }
                     }
+
+                    #endregion
                 });
                 _externalEvent.Raise();
             }

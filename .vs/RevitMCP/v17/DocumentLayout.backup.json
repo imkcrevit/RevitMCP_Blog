@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\VS_Project\\RevitMCP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|d:\\vs_project\\revitmcp\\net.mcp.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|solutionrelative:net.mcp.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FF86C7BC-25F3-C317-B709-6F71C55D2762}|NET.Mcp.Client\\NET.Mcp.Client.csproj|d:\\vs_project\\revitmcp\\net.mcp.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF86C7BC-25F3-C317-B709-6F71C55D2762}|NET.Mcp.Client\\NET.Mcp.Client.csproj|solutionrelative:net.mcp.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|d:\\vs_project\\revitmcp\\net.mcp.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|solutionrelative:net.mcp.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\vs_project\\revitmcp\\revittest\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -88,26 +88,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Client\\Program.cs",
               "RelativeDocumentMoniker": "NET.Mcp.Client\\Program.cs",
               "ToolTip": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Client\\Program.cs",
               "RelativeToolTip": "NET.Mcp.Client\\Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAADwvyoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAcwDAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-01T03:00:59.92Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Server\\Program.cs",
               "RelativeDocumentMoniker": "NET.Mcp.Server\\Program.cs",
               "ToolTip": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Server\\Program.cs",
               "RelativeToolTip": "NET.Mcp.Server\\Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-01T03:00:57.073Z",
               "EditorCaption": ""

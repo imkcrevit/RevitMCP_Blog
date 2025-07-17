@@ -17,9 +17,8 @@ await builder.Build().RunAsync();
 
 
 
-
 [McpServerToolType]
-public  class RevitTool
+public class RevitTool
 {
     [McpServerTool(Name = "RevitTool"), Description("Revit Execute Command , Also can execute some string output")]
     public string RevitCommandTool(string command)
@@ -30,17 +29,18 @@ public  class RevitTool
     }
 
 
-    [McpServerTool(Name = "CreateWall"), Description("Generation Paramaters That Can Create Wall in Revit")]
-    public string RevitCreateWallTool(string command, double x, double y, double z, double x1, double y2)
+    [McpServerTool(Name = "CreateWall"), Description("Generation Paramaters That Can Create Wall in Revit , If User Want To Generation eId , You Need To Generation a unique id base this :0B7FB9A8-DAD8-48CE-9D41-5EDB63832BD2 ")]
+    public string RevitCreateWallTool(string command, double x, double y, double z, double x1, double y2, string uniqueId)
     {
         return $@"
                 {{
                     ""command"": ""CreateWall"",
                     ""arguments"": {{
                         ""start"": [{x}, {y}, {z}],
-                        ""end"": [{x1}, {y2}, {z}]
+                        ""end"": [{x1}, {y2}, {z}],
+                        ""eId"": ""{uniqueId}""
                     }}
-                }}"; 
+                }}";
     }
 
 
@@ -57,17 +57,18 @@ public  class RevitTool
     }
 
 
-    [McpServerTool(Name = "InsertWindowInWall"), Description("Generation A Window In A Selection Wall , Define Window Size : 1500 x 1200 d, Need To Calculate The Window-Top Is Small Then Wall-Height , This Command Need Input Args : ElementId , LocationX , LocationY ,LocationZ")]
-    public string InsertWindowInWallTool(string command , int eId , double x , double y , double z)
+    [McpServerTool(Name = "InsertWindowInWall"), Description("Generation A Window In A Selection Wall , Define Window Size : 1500 x 1200 d, Need To Calculate The Window-Top Is Small Then Wall-Height , This Command Need Input Args : ElementId , LocationX , LocationY ,LocationZ , The ElementId Need a String Type , The Best is GUID-type ")]
+    public string InsertWindowInWallTool(string command, string eId, double x, double y, double z)
     {
         return $@"
                 {{
                     ""command"": ""InsertWindowInWall"",
                     ""arguments"": {{
-                        ""eId"" : {eId} ,
+                        ""eId"" : ""{eId}"",
                         ""location"": [{x},{y},{z}]
                     }}
-                }}"; 
+                }}";
     }
 }
+
 
