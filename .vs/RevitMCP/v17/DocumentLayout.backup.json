@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "D:\\VS_Project\\RevitMCP\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\vs_project\\revitmcp\\revittest\\revittest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\revittest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|d:\\vs_project\\revitmcp\\net.mcp.server\\net.mcp.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|solutionrelative:net.mcp.server\\net.mcp.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FF86C7BC-25F3-C317-B709-6F71C55D2762}|NET.Mcp.Client\\NET.Mcp.Client.csproj|d:\\vs_project\\revitmcp\\net.mcp.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF86C7BC-25F3-C317-B709-6F71C55D2762}|NET.Mcp.Client\\NET.Mcp.Client.csproj|solutionrelative:net.mcp.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|d:\\vs_project\\revitmcp\\net.mcp.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D601F368-9B97-B7AD-7C2E-68A46F7661F2}|NET.Mcp.Server\\NET.Mcp.Server.csproj|solutionrelative:net.mcp.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|d:\\vs_project\\revitmcp\\revittest\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|D:\\VS_Project\\RevitMCP\\revittest\\functionusercallwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\functionusercallwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|D:\\VS_Project\\RevitMCP\\revittest\\functionusercallwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\functionusercallwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,64 +46,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FunctionUserCallWindow.xaml.cs",
-              "DocumentMoniker": "D:\\VS_Project\\RevitMCP\\RevitTest\\FunctionUserCallWindow.xaml.cs",
-              "RelativeDocumentMoniker": "RevitTest\\FunctionUserCallWindow.xaml.cs",
-              "ToolTip": "D:\\VS_Project\\RevitMCP\\RevitTest\\FunctionUserCallWindow.xaml.cs",
-              "RelativeToolTip": "RevitTest\\FunctionUserCallWindow.xaml.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAywGcAAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T03:05:49.492Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FunctionUserCallWindow.xaml",
-              "DocumentMoniker": "D:\\VS_Project\\RevitMCP\\RevitTest\\FunctionUserCallWindow.xaml",
-              "RelativeDocumentMoniker": "RevitTest\\FunctionUserCallWindow.xaml",
-              "ToolTip": "D:\\VS_Project\\RevitMCP\\RevitTest\\FunctionUserCallWindow.xaml",
-              "RelativeToolTip": "RevitTest\\FunctionUserCallWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-01T03:05:33.661Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Command.cs",
-              "DocumentMoniker": "D:\\VS_Project\\RevitMCP\\RevitTest\\Command.cs",
-              "RelativeDocumentMoniker": "RevitTest\\Command.cs",
-              "ToolTip": "D:\\VS_Project\\RevitMCP\\RevitTest\\Command.cs",
-              "RelativeToolTip": "RevitTest\\Command.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAwwKEAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T03:04:30.008Z",
+              "DocumentIndex": 1,
+              "Title": "NET.Mcp.Server.csproj",
+              "DocumentMoniker": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Server\\NET.Mcp.Server.csproj",
+              "RelativeDocumentMoniker": "NET.Mcp.Server\\NET.Mcp.Server.csproj",
+              "ToolTip": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Server\\NET.Mcp.Server.csproj",
+              "RelativeToolTip": "NET.Mcp.Server\\NET.Mcp.Server.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-25T07:59:06.562Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "RevitTest.csproj",
+              "DocumentMoniker": "D:\\VS_Project\\RevitMCP\\RevitTest\\RevitTest.csproj",
+              "RelativeDocumentMoniker": "RevitTest\\RevitTest.csproj",
+              "ToolTip": "D:\\VS_Project\\RevitMCP\\RevitTest\\RevitTest.csproj",
+              "RelativeToolTip": "RevitTest\\RevitTest.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-25T07:58:38.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Client\\Program.cs",
               "RelativeDocumentMoniker": "NET.Mcp.Client\\Program.cs",
               "ToolTip": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Client\\Program.cs",
               "RelativeToolTip": "NET.Mcp.Client\\Program.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAcwDAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACsAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-01T03:00:59.92Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Server\\Program.cs",
               "RelativeDocumentMoniker": "NET.Mcp.Server\\Program.cs",
               "ToolTip": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Server\\Program.cs",
               "RelativeToolTip": "NET.Mcp.Server\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-01T03:00:57.073Z",
               "EditorCaption": ""

@@ -1,4 +1,4 @@
-﻿using Autodesk.Revit.UI;
+using Autodesk.Revit.UI;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -47,6 +47,7 @@ namespace RevitTest
 
                     var uiDoc = app.ActiveUIDocument;
                     var selections = uiDoc.Selection.GetElementIds();
+
                     var selection = ElementId.InvalidElementId;
                     if (selections.Any())
                     {
@@ -103,7 +104,7 @@ namespace RevitTest
 
                     //if (string.IsNullOrEmpty(errors))
                     //{
-                    //    var jsonConvertData = JsonConvert.DeserializeObject<CreateWallData>(output);
+                    //    var jsonConvertData = JsonConvert.DeserializeObject<CreateWallData>(output) ?? throw new InvalidOperationException("Failed to deserialize CreateWallData");
                     //    var methodName = jsonConvertData.Command;
                     //    // 1. 加载DLL
                     //    Assembly assembly = typeof(Command).Assembly;
@@ -163,7 +164,7 @@ namespace RevitTest
                     process.Close(); // 关闭进程
                     foreach (var item in data)
                     {
-                        var jsonConvertData = JsonConvert.DeserializeObject<List<Command.CreateWallData>>(item);
+                        var jsonConvertData = JsonConvert.DeserializeObject<List<Command.CreateWallData>>(item) ?? throw new InvalidOperationException("Failed to deserialize CreateWallData list");
                         foreach (var createWallData in jsonConvertData)
                         {
                             var methodName = createWallData.Command;
@@ -200,10 +201,10 @@ namespace RevitTest
         }
 
         public class ExecuteEventHandler : IExternalEventHandler
-        {
-            public string Name { get; private set; }
+    {
+        public string Name { get; private set; }
 
-            public Action<UIApplication> ExecuteAction { get; set; }
+        public Action<UIApplication>? ExecuteAction { get; set; }
 
             public ExecuteEventHandler(string name)
             {

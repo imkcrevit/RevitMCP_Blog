@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "wErPEIWotXM=",
+  "success": true,
+  "projectFilePath": "D:\\VS_Project\\RevitMCP\\RevitTest\\RevitTest.csproj",
+  "expectedPackageFiles": [
+    "D:\\Backup\\Documents\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "D:\\Backup\\Documents\\.nuget\\packages\\revit_all_main_versions_api_x64\\2026.0.0\\revit_all_main_versions_api_x64.2026.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

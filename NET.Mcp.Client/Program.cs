@@ -36,7 +36,7 @@ await using var mcpClient = await McpClientFactory.CreateAsync(new StdioClientTr
 var openAiOptions = new OpenAIClientOptions();
 openAiOptions.Endpoint = new Uri("https://api.deepseek.com/v1/");
 
-
+// Input You LLM Token , DeepSeek , OpenAI etc
 var chatClient = new ChatClient("deepseek-chat", new ApiKeyCredential("sk-xxxxxxxxxxxx"), openAiOptions);
 
 var client = new ChatClientBuilder(chatClient.AsIChatClient()).UseFunctionInvocation().Build();

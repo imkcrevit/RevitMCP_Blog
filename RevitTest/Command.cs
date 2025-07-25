@@ -1,4 +1,4 @@
-﻿using Autodesk.Revit.DB;
+using Autodesk.Revit.DB;
 using Autodesk.Revit.DB.Structure;
 using Newtonsoft.Json;
 using System;
@@ -15,16 +15,16 @@ namespace RevitTest
         public class InsertWindowData
         {
             [JsonProperty(PropertyName = "eId")]
-            public int ElementId { get; set; }
+            public required int ElementId { get; set; }
             [JsonProperty(PropertyName = "location")]
-            public double[] Location { get; set; }
+            public required double[] Location { get; set; }
         }
 
         public class PointData
         {
-            public int X { get; set; }
-            public int Y { get; set; }
-            public int Z { get; set; }
+            public required int X { get; set; }
+            public required int Y { get; set; }
+            public required int Z { get; set; }
         }
 
         public class CreateWallData
@@ -32,15 +32,15 @@ namespace RevitTest
             [JsonProperty(PropertyName = "command")]
             public string Command { get; set; } = string.Empty;
             [JsonProperty(PropertyName = "arguments")]
-            public object Args { get; set; }
+            public required object Args { get; set; }
         }
 
         public class CreateWallArguments
         {
             [JsonProperty(PropertyName = "start")]
-            public double[] Start { get; set; }
+            public required double[] Start { get; set; }
             [JsonProperty(PropertyName = "end")]
-            public double[] End { get; set; }
+            public required double[] End { get; set; }
         }
 
 
@@ -58,6 +58,9 @@ namespace RevitTest
                         .OfCategory(BuiltInCategory.OST_Windows)
                         .Cast<FamilySymbol>()
                         .FirstOrDefault(x => x.Name == "1500x1200");
+
+                    if (windowType == null)
+                        throw new InvalidOperationException("Window type '1500x1200' not found");
 
                     var data = JsonConvert.DeserializeObject<InsertWindowData>(jsonArgs);
 
