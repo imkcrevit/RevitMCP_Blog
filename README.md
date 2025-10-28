@@ -1,3 +1,28 @@
+# Update 25.10.28
+1. Fix The Project Than Cant Run Success , Reason : the server path was not auto adaptive to other user 
+2. ReWrite The `RevitTest` Project , Also Add The `.addin` File To User
+    - [Addin File](RevitTest/Net_AI_MCP.addin)
+3. Add The Function That can read api_key file
+4. Other detail Can Read : 
+    - [NET.MCP.CLinet Update](NET.Mcp.Client/UpdateLog.md) 
+    - [Revit Process Update](RevitTest/UpdateLog.md)
+5. Change Solution To Muti-Version
+    - [NET.Mcp.Client](NET.Mcp.Client/NET.Mcp.Client.csproj)
+    - [NET.Mcp.Server](NET.Mcp.Server/NET.Mcp.Server.csproj)
+    - [RevitTest.csproj](RevitTest/RevitTest.csproj)
+6. Add New Utility File
+    - [ConvertRevitCommand.cs](RevitTest/ConvertRevitCommand.cs)
+    - [FileUtility.cs](RevitTest/FileUtility.cs)
+    - [IRevitCommand.cs](RevitTest/IRevitCommand.cs)
+    - [RequestHandler.cs](RevitTest/RequestHandler.cs)
+7. In Revit 2026 , The Sturucture Was Refernce `NewtonSoft 13.0.1` . So If Project Ref. Others Version , Will Throw Error : `File Was Loaded .....`
+8. Also , if use the [Revit Add-iN Manage](https://github.com/chuongmep/RevitAddInManager) , use this code will cant find `location()` 
+    - if use this tool to debug , you need to make [FunctionUserCallWindow.xaml.cs](RevitTest/FunctionUserCallWindow.xaml.cs) Line 131 ~147 the `client_path` to local machine path .
+    - if use this with addin , you can use the [fileutility](RevitTest/FileUtility.cs) to get  lcoation.
+
+9. Add `Transaction Method` To Functions
+
+
 Revit MCP Blog
 =======
 [BLOG_ZH](README_ZH.md) | [BLOG_EN](README.md)

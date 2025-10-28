@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Name>Net-AI-MCP</Name>
+		<Assembly>RevitTest.dll</Assembly>
+		<AddInId>1869A8A1-A239-41CF-9A79-96234D92DEF4</AddInId>
+		<FullClassName>RevitTest.Command</FullClassName>
+		<VendorId>ADSK</VendorId>
+		<VendorDescription>https://github.com/imkcrevit</VendorDescription>
+	</AddIn>
+</RevitAddIns>

@@ -17,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Autodesk.Revit.DB;
+using TaskDialog = Autodesk.Windows.TaskDialog;
 
 
 namespace RevitTest
@@ -28,6 +29,7 @@ namespace RevitTest
     {
         ExecuteEventHandler _executeEventHandler = null;
         ExternalEvent _externalEvent = null;
+
         public FunctionUserCallWindow(ExecuteEventHandler executeEventHandler, ExternalEvent externalEvent)
         {
             InitializeComponent();
@@ -104,7 +106,7 @@ namespace RevitTest
 
                     //if (string.IsNullOrEmpty(errors))
                     //{
-                    //    var jsonConvertData = JsonConvert.DeserializeObject<CreateWallData>(output) ?? throw new InvalidOperationException("Failed to deserialize CreateWallData");
+                    //    var jsonConvertData = JsonConvert.DeserializeObject<CreateDataByAI>(output) ?? throw new InvalidOperationException("Failed to deserialize CreateDataByAI");
                     //    var methodName = jsonConvertData.Command;
                     //    // 1. 加载DLL
                     //    Assembly assembly = typeof(Command).Assembly;
@@ -122,21 +124,24 @@ namespace RevitTest
                     //}
 
                     #endregion
-                     
-                    #region 多重调用 LangChain That Can Auto Generation Wall And Then Insert Window 
 
+                    #region 多重调用 LangChain That Can Auto Generation Wall And Then Insert Window
+
+                    // if use the [Revit Add-iN Manage](https://github.com/chuongmep/RevitAddInManager) , use this code will cant find `location()` 
+                    var client_path = FileUtility.GetAssemblyPath();
 
                     var process = new Process
                     {
                         StartInfo = new ProcessStartInfo
                         {
-                            FileName =
-                                @"D:\工作文件\Development\XGZPlatform\NET.Mcp.Client\bin\Debug\net8.0\NET.Mcp.Client.exe", // 可执行文件路径（如 "cmd.exe"）
+                            FileName = @$"{client_path??"."}\NET.Mcp.Client.exe", // 可执行文件路径（如 "cmd.exe"）
                             Arguments = TextBox.Text, // 命令行参数
                             UseShellExecute = false, // 必须为 false 才能重定向输出
                             CreateNoWindow = true, // 隐藏控制台窗口
                             RedirectStandardOutput = true, // 重定向标准输出
-                            RedirectStandardError = true // 重定向错误输出（可选）
+                            RedirectStandardError = true, // 重定向错误输出（可选）
+                            WorkingDirectory = client_path
+                            
                         }
                     };
 
@@ -164,13 +169,15 @@ namespace RevitTest
                     process.Close(); // 关闭进程
                     foreach (var item in data)
                     {
-                        var jsonConvertData = JsonConvert.DeserializeObject<List<Command.CreateWallData>>(item) ?? throw new InvalidOperationException("Failed to deserialize CreateWallData list");
+                        var jsonConvertData = JsonConvert.DeserializeObject<List<Command.CreateDataByAI>>(item) ??
+                                              throw new InvalidOperationException(
+                                                  "Failed to deserialize CreateDataByAI list");
                         foreach (var createWallData in jsonConvertData)
                         {
                             var methodName = createWallData.Command;
                             // 1. 加载DLL
-                            var assembly = typeof(Command).Assembly;
-
+                            var assembly = typeof(ConvertRevitCommand).Assembly;
+                            
                             // 2. 查找实现类（通过接口或命名约定）
                             var commandType = assembly.GetTypes()
                                 .FirstOrDefault(t => t.Name == methodName);
@@ -178,8 +185,8 @@ namespace RevitTest
                             if (commandType == null)
                                 throw new Exception($"未找到 {methodName} 的实现类");
 
-                            var eCommand = (Command.IRevitCommand)Activator.CreateInstance(commandType);
-                            eCommand.Execute(JsonConvert.SerializeObject(createWallData.Args) , uiDoc.Document);
+                            var eCommand = (IRevitCommand)Activator.CreateInstance(commandType);
+                            eCommand.Execute(JsonConvert.SerializeObject(createWallData.Args), uiDoc.Document);
                         }
                     }
 
@@ -192,7 +199,8 @@ namespace RevitTest
 
         private string ConvertToString(Curve curve)
         {
-            return $"Curve Data is : Start = {ConvertToString(curve.GetEndPoint(0))} , End = {ConvertToString(curve.GetEndPoint(1))}";
+            return
+                $"Curve Data is : Start = {ConvertToString(curve.GetEndPoint(0))} , End = {ConvertToString(curve.GetEndPoint(1))}";
         }
 
         private string ConvertToString(XYZ point)
@@ -200,34 +208,6 @@ namespace RevitTest
             return $"X = {point.X * 304.8}, Y = {point.Y * 304.8}, Z = {point.Z * 304.8}";
         }
 
-        public class ExecuteEventHandler : IExternalEventHandler
-    {
-        public string Name { get; private set; }
 
-        public Action<UIApplication>? ExecuteAction { get; set; }
-
-            public ExecuteEventHandler(string name)
-            {
-                Name = name;
-            }
-
-            public void Execute(UIApplication app)
-            {
-                if (ExecuteAction != null)
-                {
-                    try
-                    {
-                        ExecuteAction(app);
-                    }
-                    catch
-                    { }
-                }
-            }
-
-            public string GetName()
-            {
-                return Name;
-            }
-        }
     }
 }

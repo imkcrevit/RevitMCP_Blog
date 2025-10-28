@@ -5,10 +5,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:local="clr-namespace:RevitTest"
         mc:Ignorable="d" 
-        d:DesignHeight="450" d:DesignWidth="800">
+        d:DesignHeight="300" d:DesignWidth="600" MaxHeight="300" MaxWidth="600">
     <Grid>
-        <Button Content="发送" HorizontalAlignment="Left" Margin="585,305,0,0" VerticalAlignment="Top" Height="30" Width="78" Click="Button_Click"/>
-        <TextBox x:Name="TextBox" HorizontalAlignment="Left" Margin="130,120,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="533" Height="115"/>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBox x:Name="TextBox" HorizontalAlignment="Center"  TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="533" Height="115"/>
+            <Button Content="发送" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="78" Click="Button_Click"/>
+        </StackPanel>
+        
 
 
     </Grid>

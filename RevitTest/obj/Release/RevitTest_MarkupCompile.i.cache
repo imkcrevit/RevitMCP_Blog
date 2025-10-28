@@ -4,7 +4,7 @@
 library
 C#
 .cs
-D:\VS_Project\RevitMCP\RevitTest\obj\Release\
+F:\DevProjects\imkcrevit\RevitMCP_Blog\RevitTest\obj\Release\
 RevitTest
 none
 false
@@ -13,7 +13,7 @@ TRACE;RELEASE;RELEASE;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER
 1-1209841886
 
 4584806227
-203-389579978
+203-306301203
 FunctionUserCallWindow.xaml;
 
 False

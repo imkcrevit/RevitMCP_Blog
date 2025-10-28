@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VS_Project\\RevitMCP\\NET.Mcp.Client\\NET.Mcp.Client.csproj": {}
+    "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\NET.Mcp.Client\\NET.Mcp.Client.csproj": {}
   },
   "projects": {
-    "D:\\VS_Project\\RevitMCP\\NET.Mcp.Client\\NET.Mcp.Client.csproj": {
-      "version": "1.0.0",
+    "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\NET.Mcp.Client\\NET.Mcp.Client.csproj": {
+      "version": "2026.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Client\\NET.Mcp.Client.csproj",
+        "projectUniqueName": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\NET.Mcp.Client\\NET.Mcp.Client.csproj",
         "projectName": "NET.Mcp.Client",
-        "projectPath": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Client\\NET.Mcp.Client.csproj",
-        "packagesPath": "D:\\Backup\\Documents\\.nuget\\packages",
-        "outputPath": "D:\\VS_Project\\RevitMCP\\NET.Mcp.Client\\obj\\",
+        "projectPath": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\NET.Mcp.Client\\NET.Mcp.Client.csproj",
+        "packagesPath": "C:\\Users\\xu.lanhui2\\.nuget\\packages\\",
+        "outputPath": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\NET.Mcp.Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "F:\\ViusalStudio\\share\\NuGetPackages"
+          "D:\\Dev\\Microsoft Visual Studio\\新建文件夹\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\xu.lanhui2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,12 +45,18 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Costura.Fody": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.Extensions.AI": {
               "target": "Package",
               "version": "[9.5.0, )"
@@ -64,7 +71,7 @@
             },
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[13.0.3, )"
+              "version": "[13.0.1, )"
             }
           },
           "imports": [
@@ -83,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
