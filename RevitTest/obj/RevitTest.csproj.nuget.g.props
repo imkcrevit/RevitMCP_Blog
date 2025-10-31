@@ -17,6 +17,6 @@
     <Import Project="$(NuGetPackageRoot)costura.fody\6.0.0\build\Costura.Fody.props" Condition="Exists('$(NuGetPackageRoot)costura.fody\6.0.0\build\Costura.Fody.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgRevit_All_Main_Versions_API_x64 Condition=" '$(PkgRevit_All_Main_Versions_API_x64)' == '' ">C:\Users\xu.lanhui2\.nuget\packages\revit_all_main_versions_api_x64\2026.0.0</PkgRevit_All_Main_Versions_API_x64>
+    <PkgRevit_All_Main_Versions_API_x64 Condition=" '$(PkgRevit_All_Main_Versions_API_x64)' == '' ">C:\Users\xu.lanhui2\.nuget\packages\revit_all_main_versions_api_x64\2024.2.0</PkgRevit_All_Main_Versions_API_x64>
   </PropertyGroup>
 </Project>

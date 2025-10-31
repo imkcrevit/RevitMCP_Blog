@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|f:\\devprojects\\imkcrevit\\revitmcp_blog\\revittest\\functionusercallwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\functionusercallwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|f:\\devprojects\\imkcrevit\\revitmcp_blog\\revittest\\revittest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\revittest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF86C7BC-25F3-C317-B709-6F71C55D2762}|NET.Mcp.Client\\NET.Mcp.Client.csproj|f:\\devprojects\\imkcrevit\\revitmcp_blog\\net.mcp.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF86C7BC-25F3-C317-B709-6F71C55D2762}|NET.Mcp.Client\\NET.Mcp.Client.csproj|solutionrelative:net.mcp.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|f:\\devprojects\\imkcrevit\\revitmcp_blog\\revittest\\requesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\requesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|f:\\devprojects\\imkcrevit\\revitmcp_blog\\revittest\\net_ai_mcp.addin||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\net_ai_mcp.addin||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|f:\\devprojects\\imkcrevit\\revitmcp_blog\\revittest\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|f:\\devprojects\\imkcrevit\\revitmcp_blog\\revittest\\updatelog.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\updatelog.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF86C7BC-25F3-C317-B709-6F71C55D2762}|NET.Mcp.Client\\NET.Mcp.Client.csproj|f:\\devprojects\\imkcrevit\\revitmcp_blog\\net.mcp.client\\updatelog.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{FF86C7BC-25F3-C317-B709-6F71C55D2762}|NET.Mcp.Client\\NET.Mcp.Client.csproj|solutionrelative:net.mcp.client\\updatelog.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|f:\\devprojects\\imkcrevit\\revitmcp_blog\\revittest\\irevitcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06347C17-E371-4840-A8B1-8B633D7C2B4C}|RevitTest\\RevitTest.csproj|solutionrelative:revittest\\irevitcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,12 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -50,68 +50,78 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Command.cs",
+              "DocumentMoniker": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\RevitTest\\Command.cs",
+              "RelativeDocumentMoniker": "RevitTest\\Command.cs",
+              "ToolTip": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\RevitTest\\Command.cs",
+              "RelativeToolTip": "RevitTest\\Command.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T09:11:32.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RevitTest.csproj",
+              "DocumentMoniker": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\RevitTest\\RevitTest.csproj",
+              "RelativeDocumentMoniker": "RevitTest\\RevitTest.csproj",
+              "ToolTip": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\RevitTest\\RevitTest.csproj",
+              "RelativeToolTip": "RevitTest\\RevitTest.csproj",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-30T09:08:22.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\NET.Mcp.Client\\Program.cs",
               "RelativeDocumentMoniker": "NET.Mcp.Client\\Program.cs",
               "ToolTip": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\NET.Mcp.Client\\Program.cs",
               "RelativeToolTip": "NET.Mcp.Client\\Program.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAuwGcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T08:25:03.702Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FunctionUserCallWindow.xaml.cs",
-              "DocumentMoniker": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\RevitTest\\FunctionUserCallWindow.xaml.cs",
-              "RelativeDocumentMoniker": "RevitTest\\FunctionUserCallWindow.xaml.cs",
-              "ToolTip": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\RevitTest\\FunctionUserCallWindow.xaml.cs*",
-              "RelativeToolTip": "RevitTest\\FunctionUserCallWindow.xaml.cs*",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAAAIsAAABFAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "IRevitCommand.cs",
+              "DocumentMoniker": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\RevitTest\\IRevitCommand.cs",
+              "RelativeDocumentMoniker": "RevitTest\\IRevitCommand.cs",
+              "ToolTip": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\RevitTest\\IRevitCommand.cs",
+              "RelativeToolTip": "RevitTest\\IRevitCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T07:43:59.928Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Command.cs",
-              "DocumentMoniker": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\RevitTest\\Command.cs",
-              "RelativeDocumentMoniker": "RevitTest\\Command.cs",
-              "ToolTip": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\RevitTest\\Command.cs",
-              "RelativeToolTip": "RevitTest\\Command.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAA9wDIAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T07:52:05.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RequestHandler.cs",
-              "DocumentMoniker": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\RevitTest\\RequestHandler.cs",
-              "RelativeDocumentMoniker": "RevitTest\\RequestHandler.cs",
-              "ToolTip": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\RevitTest\\RequestHandler.cs",
-              "RelativeToolTip": "RevitTest\\RequestHandler.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAiwCEAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T07:44:33.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T09:20:44.964Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Net_AI_MCP.addin",
-              "DocumentMoniker": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\RevitTest\\Net_AI_MCP.addin",
-              "RelativeDocumentMoniker": "RevitTest\\Net_AI_MCP.addin",
-              "ToolTip": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\RevitTest\\Net_AI_MCP.addin",
-              "RelativeToolTip": "RevitTest\\Net_AI_MCP.addin",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000072|",
-              "WhenOpened": "2025-10-28T08:20:41.768Z",
-              "EditorCaption": ""
+              "Title": "UpdateLog.md",
+              "DocumentMoniker": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\RevitTest\\UpdateLog.md",
+              "RelativeDocumentMoniker": "RevitTest\\UpdateLog.md",
+              "ToolTip": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\RevitTest\\UpdateLog.md",
+              "RelativeToolTip": "RevitTest\\UpdateLog.md",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-10-28T09:02:24.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UpdateLog.md",
+              "DocumentMoniker": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\NET.Mcp.Client\\UpdateLog.md",
+              "RelativeDocumentMoniker": "NET.Mcp.Client\\UpdateLog.md",
+              "ToolTip": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\NET.Mcp.Client\\UpdateLog.md",
+              "RelativeToolTip": "NET.Mcp.Client\\UpdateLog.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-10-28T08:59:24.929Z"
             }
           ]
         }

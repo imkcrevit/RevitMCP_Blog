@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net8.0-windows7.0": {
+    ".NETFramework,Version=v4.8": {
       "Costura.Fody/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -31,37 +31,37 @@
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+          "lib/net45/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+          "lib/net45/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
         }
       },
-      "Revit_All_Main_Versions_API_x64/2026.0.0": {
+      "Revit_All_Main_Versions_API_x64/2024.2.0": {
         "type": "package",
         "compile": {
-          "lib/net8.0/AdWindows.dll": {},
-          "lib/net8.0/RevitAPI.dll": {
-            "related": ".runtimeconfig.json;.xml"
+          "lib/net48/AdWindows.dll": {},
+          "lib/net48/RevitAPI.dll": {
+            "related": ".xml"
           },
-          "lib/net8.0/RevitAPIUI.dll": {
-            "related": ".runtimeconfig.json;.xml"
+          "lib/net48/RevitAPIUI.dll": {
+            "related": ".xml"
           },
-          "lib/net8.0/UIFramework.dll": {}
+          "lib/net48/UIFramework.dll": {}
         },
         "runtime": {
-          "lib/net8.0/AdWindows.dll": {},
-          "lib/net8.0/RevitAPI.dll": {
-            "related": ".runtimeconfig.json;.xml"
+          "lib/net48/AdWindows.dll": {},
+          "lib/net48/RevitAPI.dll": {
+            "related": ".xml"
           },
-          "lib/net8.0/RevitAPIUI.dll": {
-            "related": ".runtimeconfig.json;.xml"
+          "lib/net48/RevitAPIUI.dll": {
+            "related": ".xml"
           },
-          "lib/net8.0/UIFramework.dll": {}
+          "lib/net48/UIFramework.dll": {}
         }
       }
     }
@@ -149,10 +149,10 @@
         "packageIcon.png"
       ]
     },
-    "Revit_All_Main_Versions_API_x64/2026.0.0": {
-      "sha512": "R5Gabt6VEgHCFVym+5f0LkjeyfTFvueQGTkSphTXO2iIJAldQ+ETL2wbo/k2WmDjebZ/AgWnGDhJ3rcQiwPFig==",
+    "Revit_All_Main_Versions_API_x64/2024.2.0": {
+      "sha512": "S+JdrBK3yF+lLFjemNOSDTsEwNey8bddF2eOjqgFmtgXQCUy/BI+iudaE7xElK95uKWJKWJWAb8yW877EL3h+Q==",
       "type": "package",
-      "path": "revit_all_main_versions_api_x64/2026.0.0",
+      "path": "revit_all_main_versions_api_x64/2024.2.0",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -160,25 +160,23 @@
         "License.txt",
         "ReadMe.txt",
         "Revit.png",
-        "lib/net8.0/AdWindows.dll",
-        "lib/net8.0/RevitAPI.dll",
-        "lib/net8.0/RevitAPI.runtimeconfig.json",
-        "lib/net8.0/RevitAPI.xml",
-        "lib/net8.0/RevitAPIUI.dll",
-        "lib/net8.0/RevitAPIUI.runtimeconfig.json",
-        "lib/net8.0/RevitAPIUI.xml",
-        "lib/net8.0/UIFramework.dll",
-        "revit_all_main_versions_api_x64.2026.0.0.nupkg.sha512",
+        "lib/net48/AdWindows.dll",
+        "lib/net48/RevitAPI.dll",
+        "lib/net48/RevitAPI.xml",
+        "lib/net48/RevitAPIUI.dll",
+        "lib/net48/RevitAPIUI.xml",
+        "lib/net48/UIFramework.dll",
+        "revit_all_main_versions_api_x64.2024.2.0.nupkg.sha512",
         "revit_all_main_versions_api_x64.nuspec",
         "tools/install.ps1"
       ]
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0-windows7.0": [
+    ".NETFramework,Version=v4.8": [
       "Costura.Fody >= 6.0.0",
       "Newtonsoft.Json >= 13.0.1",
-      "Revit_All_Main_Versions_API_x64 >= 2026.*"
+      "Revit_All_Main_Versions_API_x64 >= 2024.*"
     ]
   },
   "packageFolders": {
@@ -186,7 +184,7 @@
     "D:\\Dev\\Microsoft Visual Studio\\新建文件夹\\NuGetPackages": {}
   },
   "project": {
-    "version": "2026.0.0",
+    "version": "2024.0.0",
     "restore": {
       "projectUniqueName": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\RevitTest\\RevitTest.csproj",
       "projectName": "RevitTest",
@@ -203,7 +201,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net8.0-windows7.0"
+        "net48"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -211,8 +209,8 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0-windows7.0": {
-          "targetAlias": "net8.0-windows7.0",
+        "net48": {
+          "targetAlias": "net48",
           "projectReferences": {}
         }
       },
@@ -229,8 +227,8 @@
       "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
-      "net8.0-windows7.0": {
-        "targetAlias": "net8.0-windows7.0",
+      "net48": {
+        "targetAlias": "net48",
         "dependencies": {
           "Costura.Fody": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -244,29 +242,10 @@
           },
           "Revit_All_Main_Versions_API_x64": {
             "target": "Package",
-            "version": "[2026.*, )"
+            "version": "[2024.*, )"
           }
         },
-        "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48",
-          "net481"
-        ],
-        "assetTargetFallback": true,
-        "warn": true,
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          },
-          "Microsoft.WindowsDesktop.App.WPF": {
-            "privateAssets": "none"
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }

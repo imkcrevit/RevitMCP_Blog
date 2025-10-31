@@ -61,7 +61,7 @@ namespace RevitTest {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/RevitTest;component/functionusercallwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/RevitTest;V2024.0.0.0;component/functionusercallwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\FunctionUserCallWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

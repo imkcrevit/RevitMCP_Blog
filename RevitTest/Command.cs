@@ -17,35 +17,42 @@ namespace RevitTest
     #endregion 
     public class Command : IExternalCommand
     {
+        // null! This Code Complies Ignore The Parameter Value Is Never Null Warning
         public class InsertWindowData
         {
-            [JsonProperty(PropertyName = "eId")]
-            public required int ElementId { get; set; }
-            [JsonProperty(PropertyName = "location")]
-            public required double[] Location { get; set; }
+            [JsonProperty(PropertyName = "eId", Required = Required.Always)]
+            public  int ElementId { get; set; }
+
+            [JsonProperty(PropertyName = "location", Required = Required.Always)]
+            public double[] Location { get; set; } = null!;
         }
 
         public class PointData
         {
-            public required int X { get; set; }
-            public required int Y { get; set; }
-            public required int Z { get; set; }
+            [JsonProperty(Required = Required.Always)]
+            public int X { get; set; }
+            [JsonProperty(Required = Required.Always)]
+            public int Y { get; set; }
+            [JsonProperty(Required = Required.Always)]
+            public int Z { get; set; }
         }
 
         public class CreateDataByAI
         {
             [JsonProperty(PropertyName = "command")]
             public string Command { get; set; } = string.Empty;
-            [JsonProperty(PropertyName = "arguments")]
-            public required object Args { get; set; }
+
+            [JsonProperty(PropertyName = "arguments", Required = Required.Always)]
+            public object Args { get; set; } = null!;
         }
 
         public class CreateWallArguments
         {
-            [JsonProperty(PropertyName = "start")]
-            public required double[] Start { get; set; }
-            [JsonProperty(PropertyName = "end")]
-            public required double[] End { get; set; }
+            [JsonProperty(PropertyName = "start", Required = Required.Always)]
+            public double[] Start { get; set; } = null!;
+
+            [JsonProperty(PropertyName = "end", Required = Required.Always)]
+            public double[] End { get; set; } = null!;
         }
 
         private static FunctionUserCallWindow m_modelessView;

@@ -1,3 +1,12 @@
+# Update 25.10.30 Test In Revit 2021 , 2023 , 2024 , 2025 , 2026
+1. Fix The Muti-Version Build Failed : Thats The the net8.0 | net11.0-windows contains the `require` keyword , but cant use this keyword in <= 10.0 c# version 
+2. Add Setup Video 
+    - Change The Version 
+    [Change The Version](blog_video\Video_Revit_MCP.gif)
+    - Move The Addin File Or Change Target Output Path in .csproj 
+    [Move Add-In File](blog_video\Video_Revit_MCP_2.gif)
+    - Run Command (Better Eng)
+    [Run Command](blog_video\Video_Revit_MCP_3.gif)
 # Update 25.10.28
 1. Fix The Project Than Cant Run Success , Reason : the server path was not auto adaptive to other user 
 2. ReWrite The `RevitTest` Project , Also Add The `.addin` File To User

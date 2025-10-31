@@ -1191,7 +1191,7 @@
     "D:\\Dev\\Microsoft Visual Studio\\新建文件夹\\NuGetPackages": {}
   },
   "project": {
-    "version": "2026.0.0",
+    "version": "2024.0.0",
     "restore": {
       "projectUniqueName": "F:\\DevProjects\\imkcrevit\\RevitMCP_Blog\\NET.Mcp.Client\\NET.Mcp.Client.csproj",
       "projectName": "NET.Mcp.Client",

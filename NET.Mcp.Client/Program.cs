@@ -25,7 +25,7 @@ var input = string.Join("",args);
 //MessageBox.Show($"Input: {input}", "Input Command", MessageBoxButtons.OK, MessageBoxIcon.Information);
 Debug.Print(input);
 //var input = "在一个已经存在的id为333160的坐标为(0,0,0)到(10000,0,0)高度为3000 单位是mm的墙体 ， 插入一个窗户，窗户位置可以由你自行决定";
-input = "创建一个墙体，墙体坐标为(0,0,0)->(10000,0,0)，单位是mm";
+// input = "创建一个墙体，墙体坐标为(0,0,0)->(10000,0,0)，单位是mm";
 //var input =
 //    "选中的墙体高度为3000 单位是mm的墙体 ， 插入一个窗户，窗户位置可以由你自行决定选中构件的数据为 ：WallId:333160 , WallData: Curve Data is : Start = X = 0, Y = 0, Z = 0 , End = X = 10000, Y = 0, Z = 0";
 //"选中的墙体高度为3000 单位是mm的墙体 ， 插入一个窗户，窗户位置可以由你自行决定 , Curve Data is : Start = X = 0, Y = 0, Z = 0 , End = X = 10000, Y = 0, Z = 0";
