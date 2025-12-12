@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NET.Mcp.Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug2024")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("2024.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2024+a32be6566c6bdc84b11b18245f3ae1416d1679f9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2024+bbb89b9c23da0011d9f212d0c2c0ff20ccb26bec")]
 [assembly: System.Reflection.AssemblyProductAttribute("NET.Mcp.Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NET.Mcp.Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("2024.0.0.0")]

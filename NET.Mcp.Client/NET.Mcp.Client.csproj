@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -43,7 +43,8 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<Version>$(RevitVersion)</Version>
+		<Version Condition="'$(RevitVersion)' != ''">$(RevitVersion)</Version>
+		<Version Condition="'$(RevitVersion)' == ''">1.0.0</Version>
 		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 	</PropertyGroup>

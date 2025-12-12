@@ -15,6 +15,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using ChatMessage = Microsoft.Extensions.AI.ChatMessage;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Windows.Forms;
 
 
@@ -54,7 +55,46 @@ var client = new ChatClientBuilder(chatClient.AsIChatClient()).UseFunctionInvoca
 
 var prompts = new List<Microsoft.Extensions.AI.ChatMessage>
 {
-    new ChatMessage(ChatRole.System, """you are a professional enginer in BIM , so you can select the greate tool to user , also has a good develop tech in code , and generation a standard input style And Arguments to tools , also if some question need unique id you will generate a unique eId in this talk , the example :0B7FB9A8-DAD8-48CE-9D41-5EDB63832BD2"""),
+    new ChatMessage(ChatRole.System, @"You are a professional BIM Engineer and Automation Specialist. You possess deep knowledge of Revit API logic and code development.
+
+**Core Responsibilities:**
+1. Select the most appropriate tools from the provided list to execute user requests.
+2. Generate standardized, machine-readable JSON arguments for every tool call.
+3. **CRITICAL:** You must generate a Unique Identifier (eId) for every single element created or modified. Format: GUID (e.g., 0B7FB9A8-DAD8-48CE-9D41-5EDB63832BD2).
+4. Maintain a logical memory of the elements you create to handle dependencies (e.g., creating a Window requires the specific eId of the Wall it belongs to).
+
+**Strict Geometric & Logic Rules (To prevent errors):**
+- **NO AUTO-ALIGNMENT/SNAPPING:** Treat all user-provided coordinates (x, y, z) as ABSOLUTE and FINAL. Do not assume or apply 'auto-join', 'wall-cleanup', or 'nearest-point snapping' logic unless explicitly requested. The model must be built exactly at the coordinates given.
+- **EXPLICIT HOSTING:** When creating hosted elements (Windows, Doors), you must explicitly identify the correct host element (Wall) based on the coordinate geometry and pass its `eId` into the arguments. Do not rely on automatic host detection.
+- **SEQUENCE INTEGRITY:** Do not skip any steps. If a user asks to create an element and then move it, generate both the Creation command and the Move command in the correct order.
+
+**Available Tools:**
+- RevitTool: Execute Revit generic commands
+- CreateWall: Create a wall (Args: start_point, end_point, thickness, level, disallow_join: bool)
+- ChangeWallWeight: Change weight of walls
+- InsertWindowInWall: Insert a window (Args: wall_eId, insertion_point, type)
+- CreateFloor: Create a floor (Args: boundary_points, level)
+- CreateDoor: Create a door (Args: wall_eId, insertion_point, type)
+- CreateColumn: Create a column (Args: insertion_point, type, level)
+- CreateBeam: Create a beam
+- CreateRoom: Create a room (Args: boundary_eIds, level)
+- CopyElement: Copy an element (Args: element_eId, source_point, destination_point)
+- MoveElement: Move an element (Args: element_eId, source_point, destination_point)
+- RotateElement: Rotate an element
+- DeleteElement: Delete an element (Args: element_eId)
+- CreateStair: Create a stair (Args: start_level, end_level, run_points, width, num_steps)
+
+**Output Format:**
+Return a valid JSON list of tool execution objects. No markdown outside the code block.
+Example Structure:
+[
+  {
+    ""tool"": ""ToolName"",
+    ""eId"": ""GUID"",
+    ""description"": ""Human readable explanation"",
+    ""arguments"": { ... }
+  }
+]"),
     new ChatMessage(ChatRole.User, input)
 };
 
@@ -81,48 +121,99 @@ var commandTools = from content in res.Messages
     from toolContent in content.Contents
     select (toolContent as FunctionResultContent).Result;
 
-var resultBuilder = new StringBuilder();
-resultBuilder.AppendLine("[");
-for (int i = 0; i < commandTools.Count(); i++)
+var outputs = new List<JObject>();
+foreach (var tool in commandTools)
 {
-    object commandTool = commandTools.ElementAt(i);
-    // 反序列化
-    ResponseData data = JsonConvert.DeserializeObject<ResponseData>(commandTool.ToString());
+    var t = tool?.ToString();
+    if (string.IsNullOrWhiteSpace(t)) continue;
+    ResponseData data;
+    try { data = JsonConvert.DeserializeObject<ResponseData>(t); }
+    catch { data = null; }
 
-    // 访问数据
-    foreach (var item in data.Content)
+    if (data?.Content != null)
     {
-        //Console.WriteLine($"Type: {item.Type}, Text: {item.Text}");
-        var d = item.Text;
-
-        resultBuilder.AppendLine(d);
+        foreach (var item in data.Content)
+        {
+            var s = item?.Text?.Trim();
+            if (string.IsNullOrEmpty(s)) continue;
+            JObject obj = TryParseOrNormalize(s);
+            if (obj != null) outputs.Add(obj);
+        }
     }
-    if (i == commandTools.Count() - 1)
-        continue;
-    resultBuilder.AppendLine(",");
+    else
+    {
+        var s = t.Trim();
+        JObject obj = TryParseOrNormalize(s);
+        if (obj != null) outputs.Add(obj);
+    }
 }
 
-resultBuilder.AppendLine("]");
-Debug.Print("AI Push Done!");
-Console.WriteLine(resultBuilder);
+Console.WriteLine(JsonConvert.SerializeObject(outputs));
+
+static JObject TryParseOrNormalize(string s)
+{
+    try { return JObject.Parse(s); }
+    catch
+    {
+        var normalized = NormalizeBoundaryPoints(s);
+        try { return JObject.Parse(normalized); }
+        catch { return null; }
+    }
+}
+
+static string NormalizeBoundaryPoints(string s)
+{
+    var idx = s.IndexOf("\"boundaryPoints\"", StringComparison.OrdinalIgnoreCase);
+    if (idx < 0) return s;
+    var levelIdx = s.IndexOf("\"level\"", StringComparison.OrdinalIgnoreCase);
+    if (levelIdx < 0) return s;
+    var segStart = s.IndexOf(':', idx);
+    if (segStart < 0) return s;
+    var commaBeforeLevel = s.LastIndexOf(',', levelIdx);
+    if (commaBeforeLevel < 0) return s;
+    var segment = s.Substring(segStart + 1, commaBeforeLevel - segStart - 1);
+    var nums = new List<double>();
+    var numBuilder = new StringBuilder();
+    foreach (var ch in segment)
+    {
+        if (char.IsDigit(ch) || ch == '.' || ch == '-' ) numBuilder.Append(ch);
+        else
+        {
+            if (numBuilder.Length > 0)
+            {
+                if (double.TryParse(numBuilder.ToString(), out var v)) nums.Add(v);
+                numBuilder.Clear();
+            }
+        }
+    }
+    if (numBuilder.Length > 0)
+    {
+        if (double.TryParse(numBuilder.ToString(), out var v)) nums.Add(v);
+        numBuilder.Clear();
+    }
+    var groups = new List<string>();
+    for (int i = 0; i + 2 < nums.Count; i += 3)
+    {
+        groups.Add($"[{nums[i]}, {nums[i + 1]}, {nums[i + 2]}]");
+    }
+    var replacement = $": [{string.Join(", ", groups)}]";
+    var builder = new StringBuilder();
+    builder.Append(s.AsSpan(0, segStart));
+    builder.Append(replacement);
+    builder.Append(s.AsSpan(commaBeforeLevel));
+    return builder.ToString();
+}
 
 
 
 
-public class CreateWallData
+// 通用命令数据结构，支持所有Revit操作命令
+public class RevitCommandData
 {
     [JsonProperty(PropertyName = "command")]
     public string Command { get; set; } = string.Empty;
     [JsonProperty(PropertyName = "arguments")]
-    public CreateWallArguments Args { get; set; }
-}
-
-public class CreateWallArguments
-{
-    [JsonProperty(PropertyName = "start")]
-    public double[] Start { get; set; }
-    [JsonProperty(PropertyName = "end")]
-    public double[] End { get; set; }
+    public Dictionary<string, object> Arguments { get; set; } = new Dictionary<string, object>();
 }
 
 public class ContentItem

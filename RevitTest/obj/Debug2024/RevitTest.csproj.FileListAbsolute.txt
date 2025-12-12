@@ -5,7 +5,6 @@ F:\DevProjects\imkcrevit\RevitMCP_Blog\bin\2024\Debug2024\RevitTest.pdb
 F:\DevProjects\imkcrevit\RevitMCP_Blog\RevitTest\obj\Debug2024\RevitTest.csproj.AssemblyReference.cache
 F:\DevProjects\imkcrevit\RevitMCP_Blog\RevitTest\obj\Debug2024\FunctionUserCallWindow.g.cs
 F:\DevProjects\imkcrevit\RevitMCP_Blog\RevitTest\obj\Debug2024\RevitTest_MarkupCompile.cache
-F:\DevProjects\imkcrevit\RevitMCP_Blog\RevitTest\obj\Debug2024\RevitTest_MarkupCompile.lref
 F:\DevProjects\imkcrevit\RevitMCP_Blog\RevitTest\obj\Debug2024\FunctionUserCallWindow.baml
 F:\DevProjects\imkcrevit\RevitMCP_Blog\RevitTest\obj\Debug2024\RevitTest.g.resources
 F:\DevProjects\imkcrevit\RevitMCP_Blog\RevitTest\obj\Debug2024\RevitTest.GeneratedMSBuildEditorConfig.editorconfig

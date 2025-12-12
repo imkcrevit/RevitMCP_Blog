@@ -31,8 +31,14 @@ namespace RevitTest
                 }
                 catch (Exception e)
                 {
+                    var msg = e.Message ?? string.Empty;
+                    var hintNeeded = msg.IndexOf("Invalid JavaScript property identifier character", StringComparison.OrdinalIgnoreCase) >= 0
+                                     && msg.IndexOf("boundaryPoints", StringComparison.OrdinalIgnoreCase) >= 0;
+                    var content = hintNeeded
+                        ? $"JSON格式错误：'boundaryPoints' 应为 [[x,y,z],[x,y,z],...] 的数组。请不要使用圆括号或键名形式，仅使用数值数组。\n详情：{msg}"
+                        : msg;
                     var dialog = new TaskDialog("R2026");
-                    dialog.MainContent = $"{e.Message}";
+                    dialog.MainContent = content;
                     dialog.Show();
                 }
             }

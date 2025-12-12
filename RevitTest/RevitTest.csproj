@@ -83,7 +83,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="Revit_All_Main_Versions_API_x64" Version="$(RevitVersion).*">
+    <PackageReference Include="Revit_All_Main_Versions_API_x64" Version="2026.0.0">
       <GeneratePathProperty>False</GeneratePathProperty>
   </PackageReference>
     </ItemGroup>

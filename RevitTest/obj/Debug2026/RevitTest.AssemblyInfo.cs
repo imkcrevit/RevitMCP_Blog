@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RevitTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug2026")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("2026.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2026+a32be6566c6bdc84b11b18245f3ae1416d1679f9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2026+bbb89b9c23da0011d9f212d0c2c0ff20ccb26bec")]
 [assembly: System.Reflection.AssemblyProductAttribute("Net.AI.MCP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RevitTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("2026.0.0.0")]

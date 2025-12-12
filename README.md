@@ -625,4 +625,3 @@ public class ResponseData
 From practical cases, it is evident that the application path of AI in the construction industry has become relatively clear, far from the exaggerated and mystified portrayals in certain articles or videos. As users, we should focus more on AI's efficiency-enhancing capabilities in specific scenarios, such as code compliance review, batch modeling, and drawing processing.
 
 The purpose of this article is to help readers establish a fundamental understanding of AI technology through a simple case study. Currently, public accounts and online articles are flooded with mixed-quality content, which can easily lead to misconceptions. By demonstrating real-world examples, practitioners can more accurately assess the application scope and depth of AI, thereby effectively identifying and filtering out irrelevant or misleading information.
->>>>>>> 99d9dd8 (push)
